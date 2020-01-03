@@ -1,0 +1,16 @@
+server:
+  port: 8003
+
+eureka:
+  instance:
+    hostname: eureka8003.com
+#在默认情况下，eureka server会向自己注册，需要配置以下两个为false，防止自己注册自己
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+       defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+spring:
+  application:
+    name: eureka-server

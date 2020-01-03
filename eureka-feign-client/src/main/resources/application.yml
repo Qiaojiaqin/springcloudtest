@@ -1,0 +1,21 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: eureka-feign-client-8765
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8003.com:8003/eureka/,http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+  instance:
+    instance-id: feign-client-8765
+eureka-client-8888:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true

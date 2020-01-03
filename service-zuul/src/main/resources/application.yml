@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8003.com:8003/eureka/,http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+server:
+  port: 9990
+spring:
+  application:
+    name: service-zuul
+zuul:
+  routes:
+    hi:
+      path:

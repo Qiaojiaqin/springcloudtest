@@ -1,0 +1,12 @@
+server:
+  port: 8002
+
+eureka:
+  instance:
+    hostname: eureka8002.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8003.com:8003/eureka/
+

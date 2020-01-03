@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+#defaultZone是指服务注册中心的地址
+      defaultZone: http://eureka8003.com:8003/eureka/,http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+  instance:
+    instance-id: tes1-client
+    prefer-ip-address: true
+spring:
+  application:
+    name: eureka-client-8888
+
+
+server:
+  port: 8891
+info:
+  app.name: cloud-eureka
+  company.name: com.cloud.eureka
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
